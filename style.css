@@ -1,0 +1,17 @@
+body {
+    background-color: black; 
+    color: white;
+} 
+form {
+    padding: 10px; 
+    background-color: gray;
+    border-radius: 10px;
+}
+
+div {
+    color: yellow; 
+}
+
+form div {
+    color: green; 
+}

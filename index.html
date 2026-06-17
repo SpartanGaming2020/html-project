@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>My HTML Page</title>
+    <link rel="stylesheet" href="style.css"> 
+ </head>
+<body>
+    <h1>Welcome to My HTML Page</h1>
+    <a href="about.html"> Check out our about page</a>
+    <p>
+    <a href="tables.html"> Check out our tables page</a>
+    </p>
+
+    <img src="https://placehold.co/400x200" alt="My Website">
+
+    <div>
+        <p>This is a sample HTML page with a login form.</p>
+    </div>
+    <form>
+        <div>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+    </div>
+        <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Login" 
+        onclick="OnButtonClick()">
+    </form>
+</body>
+
+<script>
+    console.log("Hello world");
+
+    function OnButtonClick() {
+        var name = document.getElementById("username").value
+        var password = document.getElementById("password").value
+        alert(name + " Logged in with password: " + password);
+    }
+</script>
+
+</html>
