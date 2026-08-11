@@ -1,17 +1,230 @@
 body {
-    background-color: black; 
-    color: white;
+    background-color: white; 
+    color: #1b1b1b;
+    font-family: "Roboto Condensed", sans-serif; 
+    margin: 0;
 } 
+
+header { 
+    width: 100%;
+    background-color: rgb(200 134 10 / 1.0);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin-top: 0;
+    color: white;
+}
+
+header ul { 
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+
+
+}
+
+Header ul li {
+    display: inline-block;
+
+}
+
+header ul li a {
+    color: white;
+    text-decoration: underline;
+    padding: 20px 10px;
+}
+
+header ul li a:visited {
+    color: rgb(45,45 ,45);
+    text-decoration: underline;
+}
+
+header ul li a:hover {
+    color: blue;
+    text-decoration: none;
+}
 form {
     padding: 10px; 
     background-color: gray;
     border-radius: 10px;
 }
 
-div {
-    color: yellow; 
-}
-
 form div {
     color: green; 
+}
+
+#blogpost1 {
+    font-width: bold;
+    color: red;
+    font-size: 36px;
+}
+
+.padding { 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.announcement {
+   background-color: #1c79d1;
+   color: white;
+}
+
+.announcement p {
+     margin-bottom: 0;
+}
+
+.carousel-item {
+   max-height: 500px;
+}
+
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.min-height {
+    min-height: 350px;
+}
+
+.float-left {
+    float: left;
+    display: block;
+}
+
+.third {
+    width: 33%;
+}
+
+.color-fill {
+    background-color: rgb(246,163, 61);
+    color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 200px;
+}
+
+footer a:hover {
+    color: rgb(246,163, 61);
+}
+
+footer a {
+    color: white;
+}
+
+footer .social{
+    list-style: none;
+    padding-left: 0;
+}
+
+footer .social li {
+    float: left;
+    display: block;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.social {
+    font-size: 32px;
+}
+
+.social img:hover {
+    opacity: 0.5;
+}
+
+.social .youtube:hover {
+    color: red; 
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lookbook {
+    margin-top: 50px !important;
+}
+
+.lookbook img {
+    width: 100%;
+}
+
+.lookbook>div {
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.products article img {
+    max-height: 400px;
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.products article {
+    height: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.products article:nth-child(odd) {
+    background-color: #606060
+
+}
+
+.products article h4 {
+    color: green;
+}
+
+.products article button {
+    border-radius: 10px;
+    border: solid 2px #f6a33d;
+    padding: 12px 20px;
+    background: transparent;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.products article button:hover {
+    background-color: #f6a33d;
+    color: white;
+}
+
+.products h4 s {
+    color: gray;
+}
+
+.right {
+    float: right;
+    display: block;
+}
+
+.left {
+    float: left;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .products article {
+    height: 600px;
+  }
 }
