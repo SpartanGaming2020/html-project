@@ -10,6 +10,9 @@ header {
     background-color: rgb(200 134 10 / 1.0);
     padding: 15px;
     box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 0 30px #000;
 }
 
 header h1 {
@@ -105,8 +108,21 @@ form div {
     display: block;
 }
 
+.float-right {
+    float: right;
+    display: block;
+}
+
 .third {
     width: 33%;
+}
+
+.two-thirds {
+    width: 66%;
+}
+
+section img {
+    max-height: 600px;
 }
 
 .color-fill {
