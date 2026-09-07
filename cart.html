@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>Table Data</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+     table, 
+     tr,
+     td {
+            border-color: white;
+            border-width: 1px;
+            border-style: solid;
+            color: white;
+            padding: 8px;
+         }
+
+         li a:hover{
+            color: red;
+            transition: 2s;
+         }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+ </head>
+ 
+<body>
+    <header class="cart-header">
+        <h1><a href="index.html">Armor and Grace</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Products</a>
+                <ul>
+                    <li><a href="./products/shirts.html">Shirts</a></li>
+                    <li><a href="./products/hoodies.html">Hoodies</a></li>
+                    <li><a href="./products/accessories.html">Accessories</a></li>
+                </ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tables.html">Sizing Charts</a></li>
+                <li><a href="../cart.html"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+     <div class="padding text-center announcement">
+        <p>15% off on orders $40 or more — Use code JOHN3:16</p>
+    </div>
+    <section class="full-width">                            
+    <h1>Your cart(<span id="cartHeaderCount">0</span>)</h1>
+    <div id="cart-contents">
+        <div class="padding cart-item">
+            <h2>Product Name</h2>
+            <p>Product Description</p>
+            <p>Price: $29.99</p>
+            <button onclick="removeItem()">Remove</button>
+        </div>
+    </div>
+    </section>
+
+    <footer class="full-width padding">
+        <div class="float-left third">
+            <form>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email">
+                <input type="submit" value="Sign Up" onclick="OnButtonClick()">
+            </form>
+        </div>
+        <div class="float-left third">
+            <ul class="social">
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="float-left third">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tables.html">Sizing Chart</a></li>
+            </ul>
+        </div>
+    </footer>
+       
+</body>
+<script>
+  var cartCount= Number (localStorage.getItem("cartCount")) || 0;
+  document.getElementById("cart-count").textContent = cartCount;
+  document.getElementById("cartHeaderCount").textContent = cartCount;
+
+ function OnButtonClick() {
+  cartCount++;
+  localStorage.setItem("cartCount", cartCount);
+  document.getElementById("cart-count").textContent = cartCount;
+}
+
+function removeItem() {
+    if(cartCount > 0){
+        cartCount--;
+        localStorage.setItem("cartCount", cartCount);
+        document.getElementById("cart-count").textContent = cartCount;
+        loadCart();
+         document.getElementById("cart-count").textContent = cartCount;
+         document.getElementById("cartHeaderCount").textContent = cartCount;
+
+    }
+}
+
+
+function loadCart() {
+    var cartContents = document.getElementById
+("cart-contents");
+
+cartContents.innerHTML="";
+
+if(cartCount === 0){
+    //the cart is empty
+    cartContents.innerHTML = "<p>Your cart is empty.</p>";
+    return;
+
+}
+
+var html = "";
+
+for(var i = 0; i < cartCount; i++){
+    // build our html
+
+    html +=` <div class="padding cart-item">
+            <h2>Product Name</h2>
+            <p>Product Description</p>
+            <p>Price: $29.99</p>
+             <button onclick="removeItem()">Remove</button>
+        </div>`;
+   
+    }
+    
+    cartContents.innerHTML = html;
+}
+loadCart();
+
+</script>
+</html>
